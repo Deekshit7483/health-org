@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Responsive Navbar</title>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="logo.png" alt="Logo" class="logo-image">
+      <span class="logo-text">Unitycare</span>
+    </div>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About Us</a></li>
+      <li>
+        <a href="#">Take Action ▼</a>
+        <ul class="dropdown">
+          <li><a href="#">Action 1</a></li>
+          <li><a href="#">Action 2</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Our Work ▼</a>
+        <ul class="dropdown">
+          <li><a href="#">Work 1</a></li>
+          <li><a href="#">Work 2</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Impact Stories</a></li>
+      <li><a href="#">Get Involved</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#" class="donate-button">Donate</a></li>
+    </ul>
+  </nav>
+  <script src="script.js"></script>
+</body>
+</html>

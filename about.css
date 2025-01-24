@@ -129,106 +129,180 @@ body {
 
 
 
-  .mission {
-    padding: 20px;
-    background-color: #f9f9f9;
-    color: #333;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-  }
-  
-  .mission h1 {
-    font-size: 28px;
-    font-weight: bold;
-    color: #222;
-    margin-bottom: 15px;
-  }
-  
-  .mission h2 {
-    font-size: 22px;
-    font-weight: bold;
-    color: #444;
-    margin-top: 20px;
-    margin-bottom: 10px;
-  }
-  
-  .mission p {
-    font-size: 16px;
-    margin-bottom: 15px;
-  }
-  
-  .mission ul {
-    list-style: disc;
-    padding-left: 20px;
-  }
-  
-  .mission ul li {
-    margin-bottom: 10px;
-    font-size: 16px;
-  }
-  
-  .mission ul li strong {
-    color: #000;
-  }
-  
-  .mission p:last-child {
-    font-weight: bold;
-    color: #000;
-  }
 
-  
-  .image-gallery {
-    padding: 20px;
-    background-color: #ffffff;
-    text-align: center;
-  }
-  
-  .image-gallery h2 {
-    font-size: 24px;
+
+/* General Reset */
+body {
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f9; /* Light background for a clean look */
     color: #333;
-    margin-bottom: 20px;
   }
   
-  .gallery {
+  /* About Us Section */
+  .about-us {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  .about-us h1 {
+    font-size: 36px;
+    color: #222;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .about-us p {
+    font-size: 18px;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+  }
+  
+  /* Team Section */
+  .team {
+    padding: 50px 20px;
+    background-color: #ffffff;
+  }
+  
+  .team h2 {
+    font-size: 32px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+    position: relative;
+  }
+  
+  .team h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #ff9900; /* Accent color */
+    margin: 10px auto;
+    border-radius: 2px;
+  }
+  
+  /* Team Members Grid */
+  .team-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
+    padding: 0 20px;
   }
   
-  .gallery-item {
+  /* Individual Team Member */
+  .team-member {
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
     background-color: #f9f9f9;
-    transition: transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
-  .gallery-item img {
+  .team-member img {
     width: 100%;
-    height: auto;
-    display: block;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 4px solid #ff9900; /* Adds an accent line under the image */
   }
   
-  .gallery-item p {
-    padding: 10px;
-    font-size: 16px;
-    color: #555;
+  .team-member h3 {
+    font-size: 22px;
+    color: #222;
+    margin: 15px 0 5px;
     font-weight: bold;
   }
   
-  .gallery-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-
-  .gallery-item img {
-    width: 100%; /* Ensures the image takes the full width of its container */
-    height: 200px; /* Fixed height for all images */
-    object-fit: cover; /* Ensures the image scales properly without distortion */
-    display: block; /* Removes any inline spacing issues */
+  .team-member p {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
   }
   
- 
+  .team-member p:last-child {
+    font-weight: bold;
+    color: #ff9900; /* Highlight contact info */
+  }
+  
+  .team-member:hover {
+    transform: translateY(-5px); /* Subtle lift effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  }
+  
+  /* Responsive Typography */
+  @media (max-width: 768px) {
+    .about-us h1 {
+      font-size: 28px;
+    }
+  
+    .about-us p {
+      font-size: 16px;
+    }
+  
+    .team h2 {
+      font-size: 28px;
+    }
+  
+    .team-member h3 {
+      font-size: 20px;
+    }
+  }
+
+  .team-member img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 4px solid #ff9900;
+  }
+  
+  /* Social Links Styling */
+.social-links {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .social-links a {
+    color: #555;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .social-links a:hover {
+    color: #0077b5; /* Default to LinkedIn color on hover */
+  }
+  
+  .social-links a:nth-child(2):hover {
+    color: #e4405f; /* Instagram color */
+  }
+  
+  /* Ensure team images are consistent */
+  .team-member img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  /* Team member styling */
+  .team-member {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  
+
 
   /* General Footer Styling */
 footer {
